@@ -171,6 +171,10 @@ export default function MainPage() {
       label:'Open',
       children: (
         <div className='history_list'>
+          <div className='history_title'>
+              <span>your oder</span>
+              <span>profit</span>
+          </div>
           {dataOpen?.current.map(item => (
             <div className='item' key={uuidv4()}>
               <div className='action'>
@@ -194,6 +198,10 @@ export default function MainPage() {
       label:'Close',
       children: (
         <div className='history_list'>
+          <div className='history_title'>
+            <span>your oder</span>
+            <span>profit</span>
+          </div>
           {dataClose?.current.map(item => (
             <div className='item' key={uuidv4()}>
               <div className='action'>
