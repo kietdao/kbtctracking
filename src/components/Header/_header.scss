@@ -1,0 +1,83 @@
+.header{
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        background-color: rgba(10, 10, 10, 0.8);
+        .header_left {
+            .logo {
+                text-transform: capitalize;
+                color: #fff;
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+        .header_right {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+            .options {
+                color: $subtitle-color;
+                span {
+                    display: inline-block;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    &:first-child {
+                        border-right: 1px solid $subtitle-color;
+                    }
+                }
+            }
+            .username {
+                display: flex;
+                align-items: center;
+                padding-right: 20px;
+                border-right: 1px solid $subtitle-color;
+                img {
+                    border-radius: 50%;
+                }
+                .user_info {
+                    margin-left: 8px;
+                    .user_name {
+                        color: #fff;
+                        text-transform: capitalize;
+                        font-weight: 600;
+                    }   
+                    .user_coin {
+                        display: flex;
+                        align-items: center;
+                        gap: 7px;
+                        .coin {
+                          color: $subtitle-color;
+                        }
+                        img {
+                            border-radius: unset;
+                        }
+                    }
+                }
+            }
+            .log {
+                .log_out {
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    text-transform: capitalize;
+                    span {
+                        color: $subtitle-color;
+                    }
+                    img {
+
+                    }
+                }
+            }
+            @include mobile {
+              .options {
+                  display: none;
+              }  
+              .log {display: none;}
+            }
+        }
+    }
+}

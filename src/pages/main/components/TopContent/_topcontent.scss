@@ -1,0 +1,61 @@
+.top_content {
+    background-color: #2A2C2E;
+    .price_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 12px 24px;
+        border-right: 1px solid #0A0A0A;
+        .price_time {
+            font-size: 10px;
+            color: $subtitle-color;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+            .price_symbol {
+                display: inline-block;
+                position: relative;
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border-radius: 50%;
+                margin-right: 4px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -55%);
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .price_number {
+                font-size: 12px;
+            }
+        }
+        .price.price-increase {
+            .price_symbol {
+                background-color: $buy-color;
+                &::before {
+                    content: '\2191';
+                }
+            }
+            .price_number {
+                color: $buy-color;
+            }
+        }
+        .price.price-decrease {
+            .price_symbol {
+                background-color: $sell-color;
+                &::before {
+                    content: '\2193';
+                }
+            }
+            .price_number {
+                color: $sell-color;
+            }
+        }
+    }
+}

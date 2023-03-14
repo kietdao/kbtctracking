@@ -1,0 +1,18 @@
+// General Variable
+$primary-color: #F7931A;
+$subtitle-color: #8A9195;
+$buy-color: #00E283;
+$sell-color: #F43C3C;
+.App {
+    font-family: 'Inter', sans-serif;
+    background-color: #202020;
+}
+// Responsive size
+@import './Responsive';
+
+// Pages scss
+@import './pages/main/mainpage';
+
+// Components scss
+@import './components/Header/header';
+@import './pages/main/components/TopContent/topcontent'

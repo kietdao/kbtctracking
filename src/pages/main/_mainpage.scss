@@ -1,0 +1,383 @@
+.main {
+    .container {
+        padding: 16px;
+        .exchange_rate {
+            height: 50vh;
+            .exchange_container {
+                .subtitle {
+                    color: $subtitle-color;
+                    font-size: 10px;
+                    text-transform: capitalize;
+                }
+                .main_title{
+                    font-size: 20px;
+                    color: #FCFDFE;
+                }
+                .mini_chart {
+                    height: 73px;
+                }
+                .exchange_info {
+                    .exchange_item {
+                        .title {
+                            color: $subtitle-color;
+                            font-size: 10px;
+                            .exchange_rate {
+                                font-size: 10px;
+                                margin-left: 4px;
+                            }
+                            .exchange_rate.increase {
+                                color: #00A660;
+                                &::before {
+                                    content: '\2191';
+                                    font-size: 12px;
+                                }
+                            }
+                            .exchange_rate.decrease {
+                                color: #DC3D3D;
+                                &::before {
+                                    content: '\2193';
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .content {
+                            font-size: 16px;
+                            color: #FCFDFE;
+                            .unit {
+                                font-size: 10px;
+                                color: $subtitle-color
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mybalance {
+            .mybalance_container {
+                background: linear-gradient(180deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.28) 100%);
+                hr {
+                    border-color: #303135;
+                }
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #FCFDFE;
+                    text-transform: capitalize;
+                    margin: 0;
+                    padding: 11px 16px;
+                }
+                .content {
+                    padding: 16px;
+                    .content_item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $subtitle-color;
+                        padding: 8px 0;
+                        &:first-child {
+                            padding: 16px 0;
+                        }
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            span.coin_symbol {
+                                display: block;
+                                position: relative;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #F7931A;
+                                margin-right: 8px;
+                                &::before {
+                                    content: '\20BF';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%) rotate(15deg);
+                                    color: #fff;
+                                    font-size: 16px;
+                                }
+                            }
+                            .balance_number {
+                                display: flex;
+                                flex-direction: column;
+                                .number {
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    color: #FCFDFE;
+                                }
+                                .amount {
+                                    color: #ACB8BD;
+                                    font-size: 10px;
+                                }
+                            }
+                            span {
+                                font-size: 12px;
+                                color: #8A9195;
+                            }
+                        }
+                        .right {
+                            button {
+                                background-color: rgba(247, 147, 26, 0.3);
+                                color: #FCFDFE;
+                                font-size: 12px;
+                                padding: 4px 8px;
+                                border: none;
+                                outline: none;
+                                img {
+                                  
+                                }
+                                span {
+                                    margin-left: 4px;
+                                    color: #FCFDFE;
+                                }
+                                &:hover {
+
+                                }
+                            }
+                            span {
+                               color: #8A9195;
+                            }
+                            .funds_number {
+                                color: $primary-color;
+                            }
+                        }
+                        span.note {
+                            font-size: 12px;
+                            color:  #52D8C6;
+                        }
+                    }
+                    .content_item.total {
+                        .left {
+                            span {
+                                color: #FCFDFE;
+                                font-weight: 400;
+                            }
+                          
+                        }
+                        .right {
+                           span {
+                                color: #FCFDFE;
+                                font-weight: 600;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+        .chart {
+            height: 50vh;
+        }
+        .calculator_tool {
+            .calculator_container {
+                background: linear-gradient(180deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.28) 100%);
+                hr {
+                    border-color: #303135;
+                }
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #FCFDFE;
+                    text-transform: capitalize;
+                    text-align: center;
+                    margin: 0;
+                    padding: 11px 16px;
+                }
+                .content {
+                    padding: 16px 55px;
+                    .content_item {
+                        .title {
+                            color: $subtitle-color;
+                            font-size: 10px;
+                            text-align: left;
+                        }
+
+                    }
+                    .amount {
+                        .calculator {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 16px;
+                            margin: 4px 0;
+                            padding: 0 16px;
+                            .calculator_input {
+                                width: 100%;
+                                .ant-input-number-group-wrapper {
+                                    width: 100%;
+                                    .ant-input-number-group-addon {
+                                        color: rgba(252, 253, 254, 0.5);
+                                        background-color: #303135;
+                                        padding: 8px 8px 8px 16px;
+                                        border: none;
+                                    }
+                                }
+                                input {
+                                    height: 44px;
+                                    padding: 10px 12px;
+                                }
+
+                            }
+                            .calculator_keys {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                gap: 8px;
+                                .keys_row {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    gap: 8px;
+                                    button {
+                                        display: flex;
+                                        flex: 1;
+                                        align-items: center;
+                                        justify-content: space-evenly;
+                                        padding: 8px 16px;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        border-radius: 5px;
+                                        color: #FCFDFE;
+                                        background-color: #2A2C2E;
+                                        text-transform: capitalize;
+                                        border: none;
+                                    }
+                                    .sell_button {
+                                        padding: 12px 48px;
+                                        text-transform: uppercase;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        background-color: $sell-color;
+                                    }   
+                                    .buy_button {
+                                        padding: 12px 48px;
+                                        text-transform: uppercase;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        background-color: $buy-color;
+                                    }
+                                    &:last-child {
+                                        margin-top: 24px;
+                                    }
+                                }
+                            }
+                            @include mobile {
+                                .calculator_keys {
+                                    width: unset;
+                                }             
+                            }
+                            @include tablet {
+                                .calculator_keys {
+                                    width: unset;
+                                }             
+                            }
+                        }
+                    }
+                    .emotion_forecast {
+
+                    }
+                }
+            }
+        }
+        .oder {
+            .oder_container {
+                background: linear-gradient(180deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.28) 100%);
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #FCFDFE;
+                    text-transform: capitalize;
+                    margin: 0;
+                    padding: 11px 16px;
+                    text-align: center;
+                }
+                .open_close {
+                    padding: 16px;
+                    .ant-tabs .ant-tabs-tab {
+                        color: #fff;
+                    }
+                    .history_list {
+                        .item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .action {
+                                display: flex;
+                                align-items: center;
+                                .action_symbol {
+                                    display: inline-block;
+                                    position: relative;
+                                    width: 16px;
+                                    height: 16px;
+                                    background-color: #fff;
+                                    border-radius: 50%;
+                                    margin-right: 4px;
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -55%);
+                                        color: #fff;
+                                        font-size: 12px;
+                                    }
+                                }
+                                .action_symbol.buy {
+                                    background-color: $buy-color;
+                                    &::before { 
+                                        content: '\2191';
+                                    }
+                                }
+                                .action_symbol.sell {
+                                    background-color: $sell-color;
+                                    &::before {
+                                        content: '\2193';
+                                    }
+                                }
+                                .action_detail {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    &.buy {
+                                        .action_name {
+                                            color: $buy-color;
+                                        }
+                                    }
+                                    &.sell {
+                                        .action_name {
+                                            color: $sell-color;
+                                        }
+                                    }
+                                    .action_name {
+                                        text-transform: uppercase;
+                                        font-weight: 600;
+                                    }
+                                    .action_oder {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            .profit_time {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: end;
+                                .profit {
+                                    &.increase {
+                                        color: $buy-color;
+                                    }
+                                    &.descrease {
+                                        color: $sell-color;
+                                    }
+                                }
+                                .time {
+                                    font-size: 10;
+                                    color: $subtitle-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
