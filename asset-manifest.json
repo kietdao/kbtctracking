@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kbtctracking/static/css/main.b37a37ff.css",
-    "main.js": "/kbtctracking/static/js/main.48222031.js",
+    "main.css": "/kbtctracking/static/css/main.ef40ee8b.css",
+    "main.js": "/kbtctracking/static/js/main.c19059e3.js",
     "static/js/787.0dd5951c.chunk.js": "/kbtctracking/static/js/787.0dd5951c.chunk.js",
     "static/media/logo.svg": "/kbtctracking/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/kbtctracking/index.html",
-    "main.b37a37ff.css.map": "/kbtctracking/static/css/main.b37a37ff.css.map",
-    "main.48222031.js.map": "/kbtctracking/static/js/main.48222031.js.map",
+    "main.ef40ee8b.css.map": "/kbtctracking/static/css/main.ef40ee8b.css.map",
+    "main.c19059e3.js.map": "/kbtctracking/static/js/main.c19059e3.js.map",
     "787.0dd5951c.chunk.js.map": "/kbtctracking/static/js/787.0dd5951c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b37a37ff.css",
-    "static/js/main.48222031.js"
+    "static/css/main.ef40ee8b.css",
+    "static/js/main.c19059e3.js"
   ]
 }
