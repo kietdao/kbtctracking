@@ -1,5 +1,16 @@
 import React, { Fragment } from 'react'
 import { Row, Col, Image, Button, InputNumber, Tabs} from 'antd'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 import { v4 as uuidv4 } from 'uuid';
 import TopContent from './components/TopContent'
 
@@ -165,6 +176,60 @@ export default function MainPage() {
     },
     ]
   }
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+  );
+  const options = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Main chart',
+      },
+    },
+  };
+  const optionsMini = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Mini chart',
+      },
+    },
+  };
+  const labels = ['13:00', '13:05', '13:10', '13:15', '13:20'];
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: dataOpen.current.map(item => item.profit),
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Dataset 2',
+        data: dataClose.current.map(item => item.profit),
+        borderColor: 'rgb(53, 162, 235)',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      },
+    ],
+  };
+  const dataMini = {
+    labels,
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: dataOpen.current.map(item => item.profit),
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+    ],
+  };
   const tabs = [
     {
       key:'open',
@@ -235,7 +300,7 @@ export default function MainPage() {
                   <span className='subtitle'>Bitcoin/ US Dollar</span>
                   <h4 className='main_title'>BTC/ USD</h4>
                   <div className='mini_chart'>
-                    Mini chart
+                    <Line options={optionsMini} data={dataMini} />;
                   </div>
                   <div className='exchange_info'>
                     <div className='exchange_item'>
@@ -308,7 +373,7 @@ export default function MainPage() {
           </Col>
           <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
               <div className='chart'>
-                chart
+                <Line options={options} data={data} />;
               </div>
               <div className='calculator_tool'>
                 <div className='calculator_container'>

@@ -2,7 +2,7 @@
     .container {
         padding: 16px;
         .exchange_rate {
-            height: 50vh;
+            margin-bottom: 34px;
             .exchange_container {
                 .subtitle {
                     color: $subtitle-color;
@@ -14,7 +14,7 @@
                     color: #FCFDFE;
                 }
                 .mini_chart {
-                    height: 73px;
+                  
                 }
                 .exchange_info {
                     .exchange_item {
@@ -166,7 +166,6 @@
             }
         }
         .chart {
-            height: 50vh;
         }
         .calculator_tool {
             .calculator_container {
